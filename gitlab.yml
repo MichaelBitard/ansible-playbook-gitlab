@@ -92,7 +92,7 @@
     - vars.yml
   tasks:
     - name: ensure database config is written
-      action: template src=templates/database.yml.j2 dest=/home/git/gitlab/config/database.yml mode=0755
+      action: template src=templates/database.yml.tmpl dest=/home/git/gitlab/config/database.yml mode=0755
     - name: ensure database gitlabhq_production is present
       mysql_db: state=present name=gitlabhq_production collation=utf8_unicode_ci encoding=utf8 login_user=root login_password=$root_database_password
     - name: ensure database user gitlab is present and has privleges
