@@ -84,7 +84,31 @@
     - name: ensure gitlab-shell is installed
       command: /home/git/gitlab-shell/bin/install
 
-# 5. Database
+# 6. GitLab
+
+- hosts: gitlab
+  sudo: yes
+  sudo_user: git
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: ensure GitLab 6.1-stable is cloned
+      git: repo=https://github.com/gitlabhq/gitlabhq.git dest=/home/git/gitlab version=6-1-stable
+    - name: ensure GitLab config file exists
+      action: template src=templates/gitlab.yml.tmpl dest=/home/git/gitlab/config/gitlab.yml mode=0755
+    - name: Make sure that socket dir exists
+      action: file path=/home/git/gitlab/tmp/sockets state=directory
+
+- hosts: gitlab
+  sudo: yes
+  tasks:
+    - name: ensure GitLab can write to log (2)
+      command: chmod -R u+rwX /home/git/gitlab/log
+    - name: ensure GitLab can write to log (2)
+      command: chmod -R u+rwX /home/git/gitlab/tmp
+
+
+# 5. Database (MUST BE DONE AFTER GITLAB CHECKOUT)
 - hosts: gitlab
   sudo: yes
   sudo_user: git

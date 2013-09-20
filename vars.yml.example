@@ -2,3 +2,13 @@
 gitlab_url_end_with_slash: http://your_gitlab_address/
 root_database_password: root
 gitlab_database_password: gitlab
+# if ldap is disabled (false), you dont have to set other variables
+ldap_enabled: false
+#ldap_host:
+#ldap_base:
+#ldap_port:
+#ldap_uid:
+#ldap_method:
+#ldap_bind_dn:
+#ldap_password:
+#ldap_allow_username_or_email_login:
