@@ -1,2 +1,4 @@
 ---
-gitlab_url_end_with_slash: http://git-prp.si.mbs/
+gitlab_url_end_with_slash: http://your_gitlab_address/
+root_database_password: root
+gitlab_database_password: gitlab

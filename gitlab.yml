@@ -83,3 +83,17 @@
       action: template src=templates/gitlab_shell_config.yml.tmpl dest=/home/git/gitlab-shell/config.yml mode=0755
     - name: ensure gitlab-shell is installed
       command: /home/git/gitlab-shell/bin/install
+
+# 5. Database
+- hosts: gitlab
+  sudo: yes
+  sudo_user: git
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: ensure database config is written
+      action: template src=templates/database.yml.j2 dest=/home/git/gitlab/config/database.yml mode=0755
+    - name: ensure database gitlabhq_production is present
+      mysql_db: state=present name=gitlabhq_production collation=utf8_unicode_ci encoding=utf8 login_user=root login_password=$root_database_password
+    - name: ensure database user gitlab is present and has privleges
+      mysql_user: state=present name=gitlab host=localhost password=$gitlab_database_password priv=gitlabhq_production.*:ALL login_password=$root_database_password
