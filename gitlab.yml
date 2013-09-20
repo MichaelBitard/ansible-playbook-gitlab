@@ -146,7 +146,7 @@
   sudo: yes
   tasks:
     - name: ensure gem charlock_holmes is installed
-      command: gem install charlock_holmes --version '0.6.9.4'
+      command: gem install charlock_holmes --version '0.6.9.4' creates=/usr/local/lib/ruby/gems/2.0.0/gems/charlock_holmes-0.6.9.4
 
 - hosts: gitlab
   sudo: yes
