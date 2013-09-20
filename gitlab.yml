@@ -26,6 +26,7 @@
       - libcurl4-openssl-dev
       - libicu-dev
       - python-docutils
+      - python-mysqldb # Required for ansible mysql module to work, see: http://ansible.cc/docs/modules.html#mysql-user
 
 - hosts: gitlab
   sudo: yes
