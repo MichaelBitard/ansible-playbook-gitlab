@@ -121,4 +121,4 @@
     - name: ensure database gitlabhq_production is present
       mysql_db: state=present name=gitlabhq_production collation=utf8_unicode_ci encoding=utf8 login_user=root login_password=$root_database_password
     - name: ensure database user gitlab is present and has privleges
-      mysql_user: state=present name=gitlab host=localhost password=$gitlab_database_password priv=gitlabhq_production.*:ALL login_password=$root_database_password
+      mysql_user: state=present name=gitlab host=localhost password=$gitlab_database_password priv=gitlabhq_production.*:ALL login_user=root login_password=$root_database_password
