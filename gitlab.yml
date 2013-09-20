@@ -138,7 +138,7 @@
       action: file path=/home/git/gitlab/tmp/pids state=directory
     - name: Make sure that public/uploads dir exists
       action: file path=/home/git/gitlab/public/uploads state=directory
-    - name: ensure copy of puma config exists
+    - name: ensure copy of unicorn config exists
       command: cp /home/git/gitlab/config/unicorn.rb.example /home/git/gitlab/config/unicorn.rb creates=/home/git/gitlab/config/unicorn.rb
 
 
