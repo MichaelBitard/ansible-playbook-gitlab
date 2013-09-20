@@ -60,7 +60,7 @@
     - name: ensure ruby is installed
       command: make install chdir=$path creates=/usr/local/bin/ruby
     - name: ensure bundler is installed
-      command: gem install bundler --no-ri --no-rdoc creates=/usr/local/lib/ruby/gems/1.9.1/gems/bundler-1.3.0
+      command: gem install bundler --no-ri --no-rdoc creates=/usr/local/lib/ruby/gems/2.0.0/gems/bundler-1.3.5
 
 
 # 3. System Users
