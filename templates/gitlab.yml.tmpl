@@ -95,14 +95,14 @@ production: &base
   ## LDAP settings
   ldap:
     enabled: {{ ldap_enabled }}
-    host: {% set ldap_host=ldap_host or "_your_ldap_server" %}'{{ ldap_host }}'
-    base: {% set ldap_base=ldap_base or "_the_base_where_you_search_for_users" %}'{{ ldap_base }}'
-    port: {% set ldap_port=ldap_port or "636" %}{{ ldap_base }}
-    uid: {% set ldap_uid=ldap_uid or "sAMAccountName" %}'{{ ldap_uid }}'
-    method: {% set ldap_method=ldap_method or "ssl" %}'{{ ldap_method }}' # "ssl" or "plain"
-    bind_dn: {% set ldap_bind_dn=ldap_bind_dn or "_the_full_dn_of_the_user_you_will_bind_with" %}'{{ ldap_bind_dn }}'
-    password: {% set ldap_password=ldap_password or "_the_password_of_the_bind_user" %}'{{ ldap_password }}'
-    allow_username_or_email_login: {% set ldap_allow_username_or_email_login=ldap_allow_username_or_email_login or "true" %}{{ ldap_allow_username_or_email_login }}
+    host: '{{ ldap_host }}'
+    base: '{{ ldap_base }}'
+    port: {{ ldap_base }}
+    uid: '{{ ldap_uid }}'
+    method: '{{ ldap_method }}' # "ssl" or "plain"
+    bind_dn: '{{ ldap_bind_dn }}'
+    password: '{{ ldap_password }}'
+    allow_username_or_email_login: {{ ldap_allow_username_or_email_login }}
 
   ## OmniAuth settings
   omniauth:

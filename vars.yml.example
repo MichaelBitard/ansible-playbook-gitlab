@@ -3,13 +3,13 @@ domain_name: your_gitlab_address
 gitlab_url_end_with_slash: http://your_gitlab_address/
 root_database_password: root
 gitlab_database_password: gitlab
-# if ldap is disabled (false), you dont have to set other variables
+## LDAP
 ldap_enabled: false
-#ldap_host:
-#ldap_base:
-#ldap_port:
-#ldap_uid:
-#ldap_method:
-#ldap_bind_dn:
-#ldap_password:
-#ldap_allow_username_or_email_login:
+ldap_host: _your_ldap_server
+ldap_base: _the_base_where_you_search_for_users
+ldap_port: 636
+ldap_uid: sAMAccountName
+ldap_method: ssl
+ldap_bind_dn: _the_full_dn_of_the_user_you_will_bind_with
+ldap_password: _the_password_of_the_bind_user
+ldap_allow_username_or_email_login: true
