@@ -48,11 +48,11 @@
     - name: ensure ruby is downloaded
       get_url: url=$url dest=/tmp/ruby
     - name: ensure ruby is extracted
-      command: tar -xf ruby-2.0.0-p247.tar.gz chdir=/tmp/ruby creates=/usr/local/bin/ruby
+      command: tar -xf ruby-2.0.0-p247.tar.gz chdir=/tmp/ruby creates=$path
     - name: ensure ruby is configured
-      command: ./configure chdir=$path creates=/usr/local/bin/ruby
+      command: ./configure chdir=$path creates=$path/Makefile
     - name: ensure ruby is compiled
-      command: make chdir=$path creates=/usr/local/bin/ruby
+      command: make chdir=$path creates=$path/ruby
 
 - hosts: gitlab
   sudo: yes
