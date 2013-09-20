@@ -1,3 +1,2 @@
 ---
-domain_name: gitlab.dev # This is an FQDN, for example: google.com, foo.com
-database_password: secrete
+gitlab_url_end_with_slash: http://git-prp.si.mbs/

@@ -1,1 +1,4 @@
 vars.yml
+vars_prp.yml
+vars_prod.yml
+*.idea
