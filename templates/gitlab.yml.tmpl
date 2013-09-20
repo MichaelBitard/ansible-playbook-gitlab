@@ -100,7 +100,7 @@ production: &base
     port: {% set ldap_port=ldap_port or "636" %}{{ ldap_base }}
     uid: {% set ldap_uid=ldap_uid or "sAMAccountName" %}'{{ ldap_uid }}'
     method: {% set ldap_method=ldap_method or "ssl" %}'{{ ldap_method }}' # "ssl" or "plain"
-    bind_dn: {% set ldap_bind_dn=ldap_bind_dnd or "_the_full_dn_of_the_user_you_will_bind_with" %}'{{ ldap_bind_dn }}'
+    bind_dn: {% set ldap_bind_dn=ldap_bind_dn or "_the_full_dn_of_the_user_you_will_bind_with" %}'{{ ldap_bind_dn }}'
     password: {% set ldap_password=ldap_password or "_the_password_of_the_bind_user" %}'{{ ldap_password }}'
     allow_username_or_email_login: {% set ldap_allow_username_or_email_login=ldap_allow_username_or_email_login or "true" %}{{ ldap_allow_username_or_email_login }}
 
