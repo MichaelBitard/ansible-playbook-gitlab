@@ -167,7 +167,7 @@
   sudo: yes
   tasks:
     - name: get init script
-      fetch: src=/home/git/gitlab/lib/support/init.d/gitlab  dest=/tmp/gitlab.init.d
+      fetch: src=/home/git/gitlab/lib/support/init.d/gitlab  dest=/tmp/gitlab.init.d flat=yes
     - name: ensure init script is installed
       copy: src=/tmp/gitlab.init.d  dest=/etc/init.d/gitlab mode=0755
     - name: make GitLab start on boot
