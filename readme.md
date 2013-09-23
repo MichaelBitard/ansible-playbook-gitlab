@@ -1,6 +1,6 @@
 # ansible-playbook-gitlab
 
-Playbook for installing GitLab 6.1 on Ubuntu (tested with debian wheezy).
+Playbook for installing GitLab 6.1 on Linux (tested with Debian Wheezy and Ubuntu Raring).
 
 Let's be honest, setting up gitlab is in pain in the ass. This ansible playbook was made to help you deploy GitLab in about 15 minutes with a single command.
 
@@ -15,7 +15,7 @@ _The playbooks use the apt module, and for that reason they only work on Debian-
 ## Installation
 Run the following:
 
-    ansible-playbook -vvv gitlab.yml -u debian
+    ansible-playbook -vvv gitlab.yml -u userOnTheRemoteMachine
 
 Now you should be able to log in with:
 
@@ -23,9 +23,11 @@ Now you should be able to log in with:
     password: 5iveL!fe
 
 ## Contributors
-
-* Alexander Teinum (https://github.com/alexanderte)
-* Jake Dahn (http://github.com/jakedahn)
+* Originals
+** Alexander Teinum (https://github.com/alexanderte)
+** Jake Dahn (http://github.com/jakedahn)
+* Upgrade
+** Michaël Bitard (https://github.com/MichaelBitard)
 
 ## License
 Copyright © 2012 Tingtun
