@@ -6,7 +6,7 @@ Let's be honest, setting up gitlab is in pain in the ass. This ansible playbook 
 
 
 ## Prerequisites
-You need to have sudo installed on the server and Ansible on the client.
+You need to have sudo and mysql-server installed on the server and Ansible on the client.
 
 You will need to copy `vars.yml.example` to `vars.yml` which contains the domain you would like to use, as the database password.
 
@@ -24,10 +24,10 @@ Now you should be able to log in with:
 
 ## Contributors
 * Originals
-** Alexander Teinum (https://github.com/alexanderte)
-** Jake Dahn (http://github.com/jakedahn)
+ * Alexander Teinum (https://github.com/alexanderte)
+ * Jake Dahn (http://github.com/jakedahn)
 * Upgrade
-** Michaël Bitard (https://github.com/MichaelBitard)
+ * Michaël Bitard (https://github.com/MichaelBitard)
 
 ## License
 Copyright © 2012 Tingtun
